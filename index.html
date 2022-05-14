@@ -5,39 +5,120 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Coffee</title>
-    <style></style>
+    <style>
+      body {
+        background: #77b5a6;
+      }
+
+      h1 {
+        display: block;
+        text-align: center;
+        border: 5px double #fff;
+        border-radius: 5px;
+        line-height: 60px;
+      }
+
+      h2 {
+        display: block;
+        text-align: center;
+        line-height: 60px;
+      }
+
+      p {
+        line-height: 1.5;
+        padding: 0 20px 0 20px;
+      }
+
+      button {
+        display: block;
+        margin: 30px auto 20px;
+        background: #9d4545;
+        color: #fff;
+        font-size: 24px;
+        padding: 15px 25px;
+        border: none;
+        border-radius: 50px;
+        box-shadow: rgba(0, 0, 0, 0.15) 5px 5px 5px;
+      }
+
+      button:hover {
+        background: #ace6c0;
+        color: #9d4545;
+      }
+
+      .container {
+        background: radial-gradient(
+          1091px at 106.5% 111.5%,
+          rgb(250, 246, 213) 0.1%,
+          rgb(218, 147, 93) 42.2%,
+          rgb(137, 86, 67) 74.3%,
+          rgb(67, 39, 39) 100.2%
+        );
+        border-radius: 15px;
+        box-shadow: rgba(0, 0, 0, 0.2) 10px 10px 10px;
+        color: #fff;
+        display: block;
+        font-family: "Montserrat", Arial, Helvetica, sans-serif;
+        padding: 25px;
+        margin: 30px auto;
+        width: 50%;
+      }
+
+      .gif {
+        display: flex;
+      }
+
+      .making-coffee {
+        width: 100%;
+        border-radius: 10px;
+      }
+
+      .more-about {
+        display: block;
+        font-size: 12px;
+        text-align: center;
+        text-decoration: none;
+        color: #9d4545;
+        margin: 20px 20px;
+      }
+
+      .more-about:hover {
+        text-decoration: underline;
+        color: #fff;
+      }
+    </style>
   </head>
   <body>
     <div class="container">
       <h1>I love Coffee</h1>
       <h2>My Favorite Coffee Recipe</h2>
-      <hr />
-      <img
-        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/034/194/original/66-666098_heart-art-in-green-cup-coffee-cup-of.jpg?1652443602"
-        alt="cup of cappuccino"
-        width="300"
-      />
+      <div class="gif">
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/034/196/original/002538_1352794.gif?1652443719"
+          alt="making cup of cappuccino"
+          class="making-coffee"
+        />
+      </div>
+      <br />
       <hr />
       <p>
-        Coffee is a brewed drink prepared from roasted coffee beans, the seeds
-        of berries from certain flowering plants in the Coffea genus. From the
-        coffee fruit, the seeds are separated to produce a stable, raw product:
-        unroasted green coffee. The seeds are then roasted, a process which
-        transforms them into a consumable product: roasted coffee, which is
-        ground into fine particles that are typically steeped in hot water
-        before being filtered out, producing a cup of coffee.
+        <strong>Coffee</strong> is a brewed drink prepared from roasted coffee
+        beans, the seeds of berries from certain flowering plants in the
+        <em>Coffea</em>
+        genus. From the coffee fruit, the seeds are separated to produce a
+        stable, raw product: unroasted green coffee. The seeds are then roasted,
+        a process which transforms them into a consumable product: roasted
+        coffee, which is ground into fine particles that are typically steeped
+        in hot water before being filtered out, producing a cup of coffee.
       </p>
-      <p class="more-about">
-        <a href="https://en.wikipedia.org/wiki/Coffee" target="_blank"
-          >More about coffee on Wikipedia</a
-        >
-      </p>
-      <button class="getRecipe">Get Coffee Recipe</button>
-      <img
-        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/034/196/original/002538_1352794.gif?1652443719"
-        alt="making cup of cappuccino"
-        width="300"
-      />
+      <a
+        href="https://en.wikipedia.org/wiki/Coffee"
+        target="_blank"
+        class="more-about"
+        >More about coffee on Wikipedia</a
+      >
+      <hr />
+      <button class="getRecipe">Get Coffee<br />Recipe</button>
       <script></script>
     </div>
   </body>
