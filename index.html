@@ -5,59 +5,67 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Coffee</title>
+
     <style>
       body {
         background: #77b5a6;
       }
 
-      h1 {
+      .more-about,
+      h1,
+      h2 {
         display: block;
         text-align: center;
+      }
+
+      .more-about:hover,
+      button,
+      .container {
+        color: #fff;
+      }
+
+      h1 {
         border: 5px double #fff;
         border-radius: 5px;
         line-height: 60px;
       }
 
       h2 {
-        display: block;
-        text-align: center;
         line-height: 60px;
       }
 
       p {
         line-height: 1.5;
-        padding: 0 20px 0 20px;
       }
 
       button {
-        display: block;
-        margin: 30px auto 20px;
         background: #9d4545;
-        color: #fff;
-        font-size: 24px;
-        padding: 15px 25px;
         border: none;
         border-radius: 50px;
         box-shadow: rgba(0, 0, 0, 0.15) 5px 5px 5px;
+        display: block;
+        font-size: 24px;
+        margin: 30px auto 20px;
+        padding: 15px 25px;
         width: 70%;
       }
 
       button:hover {
         background: #ace6c0;
-        color: #9d4545;
         border: none;
+        color: #9d4545;
       }
 
       ul {
-      list-style-type: none;
+        list-style-type: none;
       }
 
       .key {
-       background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/034/203/original/coffee-bean.png?1652445502");
-       padding-left: 1.5em;
-       background-size: 1em;
-       background-repeat: no-repeat;
-       }
+        background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/034/203/original/coffee-bean.png?1652445502");
+        background-repeat: no-repeat;
+        background-size: 16px;
+        padding-left: 24px;
+      }
 
       .container {
         background: radial-gradient(
@@ -69,7 +77,6 @@
         );
         border-radius: 15px;
         box-shadow: rgba(0, 0, 0, 0.2) 10px 10px 10px;
-        color: #fff;
         display: block;
         font-family: "Montserrat", Arial, Helvetica, sans-serif;
         padding: 25px;
@@ -82,36 +89,39 @@
       }
 
       #coffee {
-        width: 100%;
         border-radius: 10px;
+        width: 100%;
       }
 
       .more-about {
-        display: block;
-        font-size: 12px;
-        text-align: center;
-        text-decoration: none;
         color: #9d4545;
+        font-size: 12px;
         margin: 20px 20px;
+        text-decoration: none;
       }
 
       .more-about:hover {
         text-decoration: underline;
-        color: #fff;
       }
     </style>
   </head>
+
   <body>
     <div class="container">
       <h1>I love Coffee</h1>
-        <img
-          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/034/332/original/green-cup-of-coffee.jpg?1652601768"
-          alt="making cup of cappuccino"
-          id="coffee"
-        />
+
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/034/332/original/green-cup-of-coffee.jpg?1652601768"
+        alt="making cup of cappuccino"
+        id="coffee"
+      />
+
       <br />
+
       <h2>All about coffee</h2>
+
       <hr />
+
       <p class="paragraph">
         <strong>Coffee</strong> is a brewed drink prepared from roasted coffee
         beans, the seeds of berries from certain flowering plants in the
@@ -122,15 +132,17 @@
         coffee, which is ground into fine particles that are typically steeped
         in hot water before being filtered out, producing a cup of coffee.
       </p>
+
       <a
         href="https://en.wikipedia.org/wiki/Coffee"
         target="_blank"
         class="more-about"
         >More about coffee on Wikipedia</a
       >
-      <hr />
-      <button class="getRecipe">Get Coffee Recipe</button>
 
+      <hr />
+
+      <button class="getRecipe">Get Coffee Recipe</button>
 
       <script>
         function updateHeading(newHeading) {
@@ -143,36 +155,34 @@
           headingTwo.innerHTML = newHeadingTwo;
         }
 
-      function updateImage () {
-       document.getElementById("coffee").src=" https://s3.amazonaws.com/shecodesio-production/uploads/files/000/034/331/original/cappuccino.gif?1652601753";
-      }
-        
+        function updateImage() {
+          document.getElementById("coffee").src =
+            " https://s3.amazonaws.com/shecodesio-production/uploads/files/000/034/331/original/cappuccino.gif?1652601753";
+        }
 
         function updateParagraph() {
           const textElement = document.querySelector(".paragraph");
-            const textElementContent = textElement.innerHTML;
-            textElement.innerHTML = `
-            <h3>Key ingredients</h3>
-               <ul class="ingredients-list">
-                  <li><i class="key"></i>Espresso</li>
-                  <li><i class="key"></i>Steamed milk</li>
-                  <li><i class="key"></i>Foamed Milk</li>
-               </ul>
-              <h3>Equipment</h3>
-                <ul class="equipment-list">
-                    <li><i class="key"></i>Coffee machine</li>
-                    <li><i class="key"></i>Milk jug</li>
-                    <li><i class="key"></i>Thermometer</li>
-                 </ul>
-              <h3>Quick guide</h3>
-                  <ol>
-                      <li>Foam and texture the required quantity of milk.</li>
-                      <li>Brew a single or double espresso directly into your serving cup.</li>
-                      <li>Gently swirl the milk to release any large air bubbles, tap the milk jug against a table.</li>
-                      <li>Finish by giving the milk a slight 'wiggle' to ensure foam transfers from milk jug to the cup to top off your Cappuccino.</li>
-                      </ol>
-        `}
-        
+          const textElementContent = textElement.innerHTML;
+          textElement.innerHTML = `<h3>Key ingredients</h3>
+                                        <ul class="ingredients-list">
+                                           <li><i class="key"></i>Espresso</li>
+                                           <li><i class="key"></i>Steamed milk</li>
+                                           <li><i class="key"></i>Foamed Milk</li>
+                                        </ul>
+                                      <h3>Equipment</h3>
+                                        <ul class="equipment-list">
+                                           <li><i class="key"></i>Coffee machine</li>
+                                           <li><i class="key"></i>Milk jug</li>
+                                           <li><i class="key"></i>Thermometer</li>
+                                        </ul>
+                                     <h3>Quick guide</h3>
+                                         <ol>
+                                           <li>Foam and texture the required quantity of milk.</li>
+                                           <li>Brew a single or double espresso directly into your serving cup.</li>
+                                           <li>Gently swirl the milk to release any large air bubbles, tap the milk jug against a table.</li>
+                                          <li>Finish by giving the milk a slight 'wiggle' to ensure foam transfers from milk jug to the cup to top off your Cappuccino.</li>
+                                          </ol>`;
+        }
 
         function cappuccino() {
           let name = prompt("What is your name?");
@@ -190,8 +200,6 @@
             updateHeadingTwo("My Favorite Coffee Recipe");
             updateImage();
           }
-          
-          
         }
 
         let getButton = document.querySelector(".getRecipe");
@@ -199,5 +207,4 @@
       </script>
     </div>
   </body>
-  </div>
 </html>
