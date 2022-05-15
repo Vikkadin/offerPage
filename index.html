@@ -39,12 +39,25 @@
         border: none;
         border-radius: 50px;
         box-shadow: rgba(0, 0, 0, 0.15) 5px 5px 5px;
+        width: 70%;
       }
 
       button:hover {
         background: #ace6c0;
         color: #9d4545;
+        border: none;
       }
+
+      ul {
+      list-style-type: none;
+      }
+
+      .key {
+       background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/034/203/original/coffee-bean.png?1652445502");
+       padding-left: 1.5em;
+       background-size: 1em;
+       background-repeat: no-repeat;
+       }
 
       .container {
         background: radial-gradient(
@@ -68,7 +81,7 @@
         display: flex;
       }
 
-      .making-coffee {
+      #coffee {
         width: 100%;
         border-radius: 10px;
       }
@@ -91,17 +104,15 @@
   <body>
     <div class="container">
       <h1>I love Coffee</h1>
-      <h2>My Favorite Coffee Recipe</h2>
-      <div class="gif">
         <img
-          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/034/196/original/002538_1352794.gif?1652443719"
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/034/332/original/green-cup-of-coffee.jpg?1652601768"
           alt="making cup of cappuccino"
-          class="making-coffee"
+          id="coffee"
         />
-      </div>
       <br />
+      <h2>All about coffee</h2>
       <hr />
-      <p>
+      <p class="paragraph">
         <strong>Coffee</strong> is a brewed drink prepared from roasted coffee
         beans, the seeds of berries from certain flowering plants in the
         <em>Coffea</em>
@@ -118,8 +129,75 @@
         >More about coffee on Wikipedia</a
       >
       <hr />
-      <button class="getRecipe">Get Coffee<br />Recipe</button>
-      <script></script>
+      <button class="getRecipe">Get Coffee Recipe</button>
+
+
+      <script>
+        function updateHeading(newHeading) {
+          let heading = document.querySelector("h1");
+          heading.innerHTML = newHeading;
+        }
+
+        function updateHeadingTwo(newHeadingTwo) {
+          let headingTwo = document.querySelector("h2");
+          headingTwo.innerHTML = newHeadingTwo;
+        }
+
+      function updateImage () {
+       document.getElementById("coffee").src=" https://s3.amazonaws.com/shecodesio-production/uploads/files/000/034/331/original/cappuccino.gif?1652601753";
+      }
+        
+
+        function updateParagraph() {
+          const textElement = document.querySelector(".paragraph");
+            const textElementContent = textElement.innerHTML;
+            textElement.innerHTML = `
+            <h3>Key ingredients</h3>
+               <ul class="ingredients-list">
+                  <li><i class="key"></i>Espresso</li>
+                  <li><i class="key"></i>Steamed milk</li>
+                  <li><i class="key"></i>Foamed Milk</li>
+               </ul>
+              <h3>Equipment</h3>
+                <ul class="equipment-list">
+                    <li><i class="key"></i>Coffee machine</li>
+                    <li><i class="key"></i>Milk jug</li>
+                    <li><i class="key"></i>Thermometer</li>
+                 </ul>
+              <h3>Quick guide</h3>
+                  <ol>
+                      <li>Foam and texture the required quantity of milk.</li>
+                      <li>Brew a single or double espresso directly into your serving cup.</li>
+                      <li>Gently swirl the milk to release any large air bubbles, tap the milk jug against a table.</li>
+                      <li>Finish by giving the milk a slight 'wiggle' to ensure foam transfers from milk jug to the cup to top off your Cappuccino.</li>
+                      </ol>
+        `}
+        
+
+        function cappuccino() {
+          let name = prompt("What is your name?");
+          let email = prompt(
+            "Hi! " +
+              name +
+              " 👋" +
+              " Leave your email and get a great coffee recipe!"
+          );
+
+          if ((name.length, email.length > 0)) {
+            alert("☕ " + "Here's your recipe!" + " 👇");
+            updateHeading("Cappuccino");
+            updateParagraph();
+            updateHeadingTwo("My Favorite Coffee Recipe");
+            updateImage();
+          }
+          
+          
+        }
+
+        let getButton = document.querySelector(".getRecipe");
+        getButton.addEventListener("click", cappuccino);
+      </script>
     </div>
   </body>
+  </div>
 </html>
