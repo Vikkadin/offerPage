@@ -185,20 +185,17 @@
         }
 
         function cappuccino() {
-          let name = prompt("What is your name?");
+          let name = prompt(`What is your name?`);
           let email = prompt(
-            "Hi! " +
-              name +
-              " 👋" +
-              " Leave your email and get a great coffee recipe!"
+            `Hi! ${name} 👋  Give your email and get a great coffee recipe!`
           );
 
           if ((name.length, email.length > 0)) {
-            alert("☕ " + "Here's your recipe!" + " 👇");
-            updateHeading("Cappuccino");
-            updateParagraph();
-            updateHeadingTwo("My Favorite Coffee Recipe");
+            alert(`☕ Here's your recipe! 👇`);
             updateImage();
+            updateParagraph();
+            updateHeading(`Cappuccino`);
+            updateHeadingTwo(`My Favorite Coffee Recipe`);
           }
         }
 
