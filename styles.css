@@ -1,0 +1,96 @@
+body {
+  background: #77b5a6;
+}
+
+.more-about,
+h1,
+h2 {
+  display: block;
+  text-align: center;
+}
+
+.more-about:hover,
+button,
+.container {
+  color: #fff;
+}
+
+h1 {
+  border: 5px double #fff;
+  border-radius: 5px;
+  line-height: 60px;
+}
+
+h2 {
+  line-height: 60px;
+}
+
+p {
+  line-height: 1.5;
+}
+
+button {
+  background: #9d4545;
+  border: none;
+  border-radius: 50px;
+  box-shadow: rgba(0, 0, 0, 0.15) 5px 5px 5px;
+  display: block;
+  font-size: 24px;
+  margin: 30px auto 20px;
+  padding: 15px 25px;
+  width: 70%;
+}
+
+button:hover {
+  background: #ace6c0;
+  border: none;
+  color: #9d4545;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.key {
+  background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/034/203/original/coffee-bean.png?1652445502");
+  background-repeat: no-repeat;
+  background-size: 16px;
+  padding-left: 24px;
+}
+
+.container {
+  background: radial-gradient(
+    1091px at 106.5% 111.5%,
+    rgb(250, 246, 213) 0.1%,
+    rgb(218, 147, 93) 42.2%,
+    rgb(137, 86, 67) 74.3%,
+    rgb(67, 39, 39) 100.2%
+  );
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.2) 10px 10px 10px;
+  display: block;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  padding: 25px;
+  margin: 30px auto;
+  width: 50%;
+}
+
+.gif {
+  display: flex;
+}
+
+#coffee {
+  border-radius: 10px;
+  width: 100%;
+}
+
+.more-about {
+  color: #9d4545;
+  font-size: 12px;
+  margin: 20px 20px;
+  text-decoration: none;
+}
+
+.more-about:hover {
+  text-decoration: underline;
+}
